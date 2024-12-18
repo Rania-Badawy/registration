@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="74" height="74" viewBox="0 0 74 74">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_7249" data-name="Rectangle 7249" width="74" height="74" transform="translate(0.001)" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="Group_2318" data-name="Group 2318" transform="translate(-1663 -529)">
+    <g id="Mask_Group_304" data-name="Mask Group 304" transform="translate(1663 529)" clip-path="url(#clip-path)">
+      <g id="Group_1924" data-name="Group 1924" transform="translate(4.213 0)">
+        <path id="Path_7387" data-name="Path 7387" d="M118.929,216.726H184.5v49.633H118.929Z" transform="translate(-118.929 -194.722)" fill="#f5f5f7"/>
+        <path id="Path_7388" data-name="Path 7388" d="M340.463,216.726h32.786v49.633H340.463Z" transform="translate(-307.676 -194.722)" fill="#e0e3ee"/>
+        <path id="Path_7389" data-name="Path 7389" d="M118.929,500.755H184.5v9.96H118.929Z" transform="translate(-118.929 -436.715)" fill="#e0e3ee"/>
+        <path id="Path_7390" data-name="Path 7390" d="M340.463,500.759h32.786v9.958H340.463Z" transform="translate(-307.676 -436.718)" fill="#c3cadd"/>
+        <path id="Path_7391" data-name="Path 7391" d="M119.242,124.518h65.481v16.257H119.242Z" transform="translate(-119.195 -116.16)" fill="#d5f4ff"/>
+        <path id="Path_7392" data-name="Path 7392" d="M340.463,124.522H373.2v16.256H340.463Z" transform="translate(-307.676 -116.164)" fill="#48ceff"/>
+        <g id="Group_1920" data-name="Group 1920" transform="translate(53.735 0)">
+          <path id="Path_7393" data-name="Path 7393" d="M418.938,81.228v-8.8a3.886,3.886,0,0,1,7.772,0v8.8a3.886,3.886,0,0,1-7.772,0Z" transform="translate(-418.938 -68.546)" fill="#1c65a3"/>
+        </g>
+        <g id="Group_1923" data-name="Group 1923" transform="translate(4.234 0)">
+          <g id="Group_1922" data-name="Group 1922" transform="translate(0)">
+            <g id="Group_1921" data-name="Group 1921">
+              <path id="Path_7394" data-name="Path 7394" d="M209.474,81.228v-8.8a3.886,3.886,0,1,1,7.772,0v8.8a3.886,3.886,0,1,1-7.772,0Z" transform="translate(-209.474 -68.546)" fill="#1c65a3"/>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <text id="Tuesday" transform="translate(1700 580)" fill="#505050" font-size="18" font-family="JFFlat-Regular, JF Flat"><tspan x="-30.625" y="0">Tuesday</tspan></text>
+  </g>
+</svg>

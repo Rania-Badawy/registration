@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+    <head>
+        <!-- Required Meta Tags -->
+        <meta name="language" content="ar">
+        <meta http-equiv="x-ua-compatible" content="text/html" charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="The Description of This Page Goes Right Here and its !Important" />
+        <meta name="keywords" content="keywords,goes,here,for,this,web,site,its,!important,and,keep,it,dynamic" />
+        <title>Tornado Starter Template</title>
+        <!-- Open Graph Meta Tags -->
+        <meta property="og:title" content="This Page title Goes Here" />
+        <meta property="og:description" content="The Description of This Page Goes Right Here and its !Important" />
+        <meta property="og:url" content="http://domain.com/page-url/" />
+        <meta property="og:image" content="img/logo.png" />
+        <meta name="twitter:image" content="img/logo.png">
+        <meta name="facebook:description" content="The Description of This Page Goes Right Here and its !Important" />
+        <!-- Other Meta Tags -->
+        <meta name="robots" content="index, follow" />
+        <meta name="copyright" content="Sitename Goes Here">
+		<link rel="shortcut icon" type="image/png"  href="img/logo.png">
+        <!-- Required CSS Files -->
+        <link href="css/tornado-icons.css" rel="stylesheet" />
+        <link href="css/tornado-rtl.css" rel="stylesheet" />
+    </head>
+    <body>
+
+        <!-- Page Content -->
+        <div class="container seasson-page max-750">
+            <!-- Page Title -->
+            <h4 class="h4 tx-align-center page-title">سداد الرسوم الدراسية المتبقية على الأبناء</h4>
+            <!-- // Page Title -->
+
+            <!-- Tabs -->
+            <div class="payments-tabs">
+                <!-- Methods -->
+                <ul class="payment-methods row gutter-small">
+                    <li data-id="visa" class="active"><img src="img/visa.png" alt=""></li>
+                    <li data-id="mada"><img src="img/mada.png" alt=""></li>
+                    <li data-id="mastercard"><img src="img/mastercard.svg" alt=""></li>
+                </ul>
+                <!-- Tab Content -->
+                <div class="tab-content active" id="visa">
+                    <form action="" class="form-ui row gutter-small">
+                        <!-- Control -->
+                        <label class="col-3">اسم صاحب البطاقة</label>
+                        <div class="col-9">
+                            <input type="text" placeholder="">
+                        </div>
+                        <!-- Control -->
+                        <label class="col-3">الرقم البطاقة</label>
+                        <div class="col-9">
+                            <input type="text" placeholder="">
+                        </div>
+                        <!-- Control -->
+                        <label class="col-3">الرقم السري CVV</label>
+                        <div class="col-6">
+                            <input type="text" placeholder="">
+                        </div>
+                        <div class="col-3">
+                            <input type="submit" value="تأكيد الدفع" class="btn primary round-corner block-lvl">
+                        </div>
+                    </form>
+                </div>
+                <!-- Tab Content -->
+                <div class="tab-content" id="mada">Mada</div>
+                <!-- Tab Content -->
+                <div class="tab-content" id="mastercard">MasterCard</div>
+                <!-- // Tab Content -->
+            </div>
+            <!-- // Tabs -->
+        </div>
+        <!-- // Page Content -->
+
+
+        <script>
+            document.addEventListener('DOMContentLoaded', Ready => {
+                //===> Tabs <===//
+                var TabsMenu = document.querySelectorAll('.payment-methods li');
+                TabsMenu.forEach(tab => {
+                    tab.addEventListener('click', event => {
+                        event.preventDefault();
+                        var tabID = tab.getAttribute('data-id'),
+                            tabContent = document.querySelector(`#${tabID}`);
+                        if (tabContent) {
+                            TabsMenu.forEach(item => item.classList.remove('active'));
+                            document.querySelectorAll('.payments-tabs .tab-content').forEach(item => item.classList.remove('active'));
+                            tab.classList.add('active');
+                            tabContent.classList.add('active');
+                        }
+                    });
+                });
+            });
+        </script>
+
+        <!-- Required JS Files -->
+        <script src="js/tornado.min.js"></script>
+    </body>
+</html>

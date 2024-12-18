@@ -1,0 +1,70 @@
+
+application/hooks/Myclass.php
+application/views/emp/online_lecArticlePage.php
+application/config/config.php
+application/config/database.php
+application/config/email.php
+application/config/routes.php
+application/language/arabic/config_lang.php
+application/language/english/config_lang.php
+application/hooks/myclass.php
+application/upload
+upload
+assets/e_library
+assets/exam
+assets/lesson
+assets/homework
+assets/plan_week
+assets/icontables
+assets/user_data
+intro/images/school_logo
+chat_uploads
+assets_new/js/reg_validation.js
+error_log
+
+
+## CodeIgniter 3 Framework Files
+## -----------------------------
+application/logs/*
+application/logs/.htaccess
+/vendor/
+*/config/development
+*/logs/log-*.php
+!*/logs/index.html
+*/cache/*
+*/system/cache/!index.html
+*/cache/.htaccess
+*/user_guide
+*/wsdls/*
+*mailing/
+
+user_guide_src/build/*
+user_guide_src/cilexer/build/*
+user_guide_src/cilexer/dist/*
+user_guide_src/cilexer/pycilexer.egg-info/*
+
+## CodeKit Files
+## -----------------------------
+*.codekit
+
+
+## SASS and Compass Files
+## -----------------------------
+**/.sass-cache/**
+config.rb
+
+
+## Mac Stuff
+## -----------------------------
+.DS_Store
+
+
+# Global files
+*.zip
+.svn
+*thumbs.db
+*.bak
+.hg/*
+*.sublime-project
+*.sublime-workspace
+

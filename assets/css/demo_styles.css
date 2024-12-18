@@ -1,0 +1,262 @@
+/******************************
+EXAMPLE STYLES
+******************************/
+.noscroll {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+/* Overlay */
+.overlay {
+	
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  z-index: 9999;
+  visibility: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap {
+  display: block;
+  width: 80%;
+  max-width: 740px;
+  margin: 120px auto 0;
+}
+
+.close {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  font-size: 36px;
+}
+
+/* Main Nav */
+.nav {
+margin-right:1% !important;
+  font-size: 33px;
+}
+
+.nav-el {
+  position: relative;margin-right:1.5% !important;
+  display: inline-block;
+  float: right !important;
+  width: 20%;
+  font-weight:bold;   
+  color: white;
+  z-index: 10;
+  font-size:16px !important;
+  /* Placements */
+}
+.nav-el [class^="icon-"], .nav-el [class*=" icon-"] {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  line-height: 0;
+  margin-left: -0.5em;
+}
+.nav-el.active_reverse {
+  z-index: 11;
+  background: transparent;
+}
+.nav-el.inactive {
+  pointer-events: none;
+  cursor: default;
+}
+.nav-el {
+  float: right;
+}
+.nav-el {
+  margin-top:10px;
+}
+.mfg-cancel {
+	color:#fff !important;
+	}
+/* A fix for Safari and .nav-el z-index:
+	when animation starts, the square appear bellow other .nav-el
+  	even if it has a bigger z-index */
+.demo3_cont {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Space adjustment  */
+@media only screen and (min-width: 520px) {
+  .nav {
+    font-size: 48px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .overlay .wrap {
+    margin: 150px auto 0;
+  }
+}
+/******************************
+COLORS
+******************************/
+/* demo1 */
+
+.dm-demo1 .button {
+  color: #1abc9c;
+  background: #16a085;
+}
+.dm-demo1 .button:hover {
+  background-color: rgba(102,102,102,0.5);
+}
+.dm-demo1 .overlay {
+  background-color: rgba(102,102,102,0.5);
+}
+.dm-demo1 .nav-el {
+  background-color: #16a085;
+  transition: background-color .3s ease-in;
+  -moz-transition: background-color .3s ease-in;
+  -webkit-transition: background-color .3s ease-in;
+}
+.dm-demo1 .nav-el:hover, .dm-demo1 .nav-el.active {
+  background:rgba(51, 51, 51, 0.9);
+}
+.dm-demo1 .nav-el.active {
+  z-index: 11;
+}
+.dm-demo1 .backtoarticle {
+  border-color: #16a085;
+  color: #16a085;
+}
+.dm-demo1 .backtoarticle:hover {
+  color: #107360;
+  border-color: rgba(102,102,102,0.5);
+}
+
+/* demo2 */
+.dm-demo2 {
+  background: #3498db;
+}
+.dm-demo2 .button {
+  color: #3498db;
+  background: #2980b9;
+}
+.dm-demo2 .button:hover {
+  background-color: #20638f;
+}
+.dm-demo2 .overlay {
+  background-color: #20638f;
+}
+.dm-demo2 .nav-el {
+  background-color: #2980b9;
+  transition: background-color .3s ease-in;
+  -moz-transition: background-color .3s ease-in;
+  -webkit-transition: background-color .3s ease-in;
+}
+.dm-demo2 .nav-el:hover, .dm-demo2 .nav-el.active {
+  background: #20638f;
+}
+.dm-demo2 .nav-el.active {
+  z-index: 11;
+}
+.dm-demo2 .backtoarticle {
+  border-color: #2980b9;
+  color: #2980b9;
+}
+.dm-demo2 .backtoarticle:hover {
+  color: #20638f;
+  border-color: #20638f;
+}
+
+/* demo3 */
+.dm-demo3 {
+  background: #9b59b6;
+}
+.dm-demo3 .button {
+  color: #9b59b6;
+  background: #8e44ad;
+}
+.dm-demo3 .button:hover {
+  background-color: #703688;
+}
+.dm-demo3 .overlay {
+  background-color: #703688;
+}
+.dm-demo3 .nav-el {
+  background-color: #8e44ad;
+  transition: background-color .3s ease-in;
+  -moz-transition: background-color .3s ease-in;
+  -webkit-transition: background-color .3s ease-in;
+}
+.dm-demo3 .nav-el:hover, .dm-demo3 .nav-el.active {
+  background: #703688;
+}
+.dm-demo3 .nav-el.active {
+  z-index: 11;
+}
+.dm-demo3 .backtoarticle {
+  border-color: #8e44ad;
+  color: #8e44ad;
+}
+.dm-demo3 .backtoarticle:hover {
+  color: #703688;
+  border-color: #703688;
+}
+
+/* demo4 */
+.dm-demo4 {
+  background: #34495e;
+}
+.dm-demo4 .button {
+  color: #34495e;
+  background: #2c3e50;
+}
+.dm-demo4 .button:hover {
+  background-color: #1a242f;
+}
+.dm-demo4 .overlay {
+  background-color: #1a242f;
+}
+.dm-demo4 .nav-el {
+  background-color: #2c3e50;
+  transition: background-color .3s ease-in;
+  -moz-transition: background-color .3s ease-in;
+  -webkit-transition: background-color .3s ease-in;
+}
+.dm-demo4 .nav-el:hover, .dm-demo4 .nav-el.active {
+  background: #1a242f;
+}
+.dm-demo4 .nav-el.active {
+  z-index: 11;
+}
+.dm-demo4 .backtoarticle {
+  border-color: #2c3e50;
+  color: #2c3e50;
+}
+.dm-demo4 .backtoarticle:hover {
+  color: #1a242f;
+  border-color: #1a242f;
+}
+
+.overlay ul {
+	direction:rtl;
+	list-style:none;
+	}
+.overlay ul li{
+	line-height:30px;
+	margin-top:4px;
+    display:inline;
+	margin-right:3px;
+	
+	}	
+.overlay ul li a{
+	font-size:18px;	
+	border:#fff solid 1px;
+	padding:4px 7px;
+	}	
+.overlay ul li a:hover{
+	text-decoration:none;
+	color:#fff;
+	}	
+	
+	

@@ -1,0 +1,1 @@
+{"result":{"text":"square root of 2 space plus space 3 equals end root\n2 س squared space plus 3 ص to the power of 3 space end exponent equals"},"status":"ok"}

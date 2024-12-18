@@ -1,0 +1,440 @@
+.langAndLog {
+    position: absolute !important;
+    right: 12px;
+    width: 120px;
+    top: 28px;
+    width: 75px;
+}
+
+.photoDiv p,
+.textChannel p {
+    border-right: 0;
+    border-left: 5px solid var(--main-color);
+    padding-left: 10px;
+    padding-right: 0;
+}
+
+.photoDiv .thirdDiv {
+    margin-right: 1%;
+}
+
+.indications .indication_card img.ficon {
+    right: unset;
+    left: 10px;
+}
+
+.indications .indication_card img.sicon {
+    right: unset;
+    left: 20px;
+}
+
+.indications .indication_card b {
+    border-right: 5px solid var(--main-color);
+    border-left: 0;
+    padding: 0 5px 0 0;
+    margin-right: 5px;
+}
+
+.school-goals .card p,
+p {
+    text-align: left;
+}
+
+.school-goals .card {
+    text-align: center;
+    background-color: #fff;
+    border-radius: 25px;
+    width: 30.5%;
+    float: left;
+}
+
+.readmore {
+    text-decoration: none;
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+    padding: 5px 7px;
+    border-radius: 25px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.school-goals .card i {
+    margin-top: 50px;
+    font-size: 60px;
+    color: #676865;
+}
+
+.school-goals .card h2 {
+    color: var(--main-color2);
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.school-goals .card p {
+    color: var(--main-color2);
+    line-height: 1.3;
+    font-size: 13px;
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.school-goals .card:nth-of-type(2) {
+    margin: 0 3%;
+    -webkit-box-shadow: -1px 4px 7px -4px rgb(0 0 0 / 54%);
+    min-height: 410px;
+    max-height: 410px;
+}
+
+.school-goals .card img {
+    margin-top: 20px;
+    border-radius: 50%;
+}
+
+.school-goals .card:nth-of-type(2) button {
+    border: 2px solid var(--main-color);
+    color: var(--main-color);
+    border-radius: 25px;
+    background-color: #fff;
+    width: 150px;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+.school-goals .card:nth-of-type(3) i {
+    color: var(--main-color);
+}
+
+.school-goals .card:nth-of-type(1),
+.school-goals .card:nth-of-type(3) {
+    margin-top: 5%;
+    -webkit-box-shadow: -1px 4px 7px -4px rgb(0 0 0 / 54%);
+    min-height: 300px;
+    max-height: 300px;
+}
+
+.owl-carousel.owl-rtl {
+    margin: auto !important;
+}
+
+.teachers .one {
+    text-align: right;
+}
+
+.teachers .one b {
+    margin: 10px 70px 0 0;
+}
+
+.students .one b {
+    margin: 10px 0 0 80px;
+}
+
+.teachers h2 {
+    left: 0;
+    right: unset;
+}
+
+.teachers .two b {
+    margin: 10px 0 0 60px;
+}
+
+.students h2 {
+    right: 0;
+    left: unset;
+}
+
+.rightAct {
+    margin-left: 0;
+    margin-right: 2%;
+}
+
+.addContent {
+    margin-left: 20px;
+    text-align: left;
+    margin-right: 0;
+}
+
+.contact {
+    border-left: 4px solid var(--main-color);
+    text-align: left;
+    padding-left: 10px;
+    border-right: 0;
+    padding-right: 0;
+}
+
+.rightDiv {
+    margin-right: 10%;
+    margin-left: -5.5%;
+}
+
+.leftDiv {
+    margin-left: -50px;
+}
+
+.leftDiv .indication_card:nth-of-type(2) {
+    margin-left: 15%;
+    margin-top: -10px;
+}
+
+.adDate {
+    text-align: left;
+}
+
+.adDate i {
+    float: left;
+    margin-right: 8px;
+    margin-top: 5px;
+}
+
+.ad-content h5 {
+    text-align: left;
+}
+
+.textChannel img:first-of-type {
+    right: -60px !important;
+    left: unset !important;
+    ;
+}
+
+.textChannel img:nth-of-type(2) {
+    left: 240px !important;
+    right: unset !important;
+    ;
+}
+
+.textChannel img:nth-of-type(3) {
+    left: 80px !important;
+    right: unset !important;
+    ;
+}
+
+.socialIcon {
+    margin-left: 47%;
+    margin-right: unset !important;
+}
+
+.teachers .one img:first-of-type {
+    right: 250px !important;
+    left: unset !important;
+}
+
+.teachers .two {
+    text-align: right;
+}
+
+.teachers .three {
+    margin-right: 100px;
+    margin-left: unset !important;
+}
+
+.teachers .three img:first-of-type {
+    right: 260px !important;
+    left: unset !important;
+}
+
+
+
+.students .one img:first-of-type {
+    left: 250px !important;
+    right: unset !important;
+}
+
+.students .two {
+    margin-left: 100px;
+    margin-right: unset !important;
+}
+
+.students .three img:nth-of-type(2) {
+    left: 260px !important;
+    right: unset !important;
+}
+
+.mapouter label {
+    text-align: left;
+    margin-left: 43px;
+    margin-right: unset !important;
+}
+
+
+@media screen and (max-width: 500px) {
+    body {
+        margin-right: -20px
+    }
+
+    .leftDiv {
+        margin-left: 0 !important;
+        ;
+    }
+
+    .leftDiv .indication_card:nth-of-type(2) {
+        margin-left: 0 !important;
+    }
+
+    .students {
+        margin-left: 30px;
+    }
+
+    .students .two {
+        margin-left: 0 !important;
+    }
+
+    .teachers .three {
+        margin-right: 0 !important;
+    }
+
+    .social-links {
+        margin-top: 10px;
+        margin-right: unset !important;
+    }
+
+    .iframes {
+        margin-right: 50px;
+    }
+
+    .rightDiv .indication_card:nth-of-type(2),
+    .rightDiv .indication_card:nth-of-type(3),
+    .leftDiv .indication_card,
+    .indications .indication_card {
+        width: 330px !important;
+        ;
+    }
+
+    .ball-img {
+        right: 60px !important;
+    }
+
+    .ads {
+        margin-right: 30px !important;
+    }
+
+    .address .phoneNum {
+        width: 72% !important;
+    }
+
+    .school-goals .card {
+        width: 100% !important;
+    }
+
+    .textChannel img:first-of-type {
+        right: 60px !important;
+        left: unset !important;
+        ;
+    }
+}
+
+.snapIcon {
+    position: relative;
+}
+
+.navbar .social-links {
+    margin: 0 -40px 0 2px;
+}
+
+.navbar .social-links ul {
+    margin-left: -20px;
+}
+
+.navbar .nav-btn {
+    left: 0;
+    right: unset;
+}
+
+.langandlogin {
+    right: 10px;
+    left: unset;
+}
+
+.col4:nth-of-type(3) h6 span:first-of-type {
+    left: 65px;
+    right: unset !important;
+}
+
+.col4:nth-of-type(3) h6 span:last-of-type {
+    left: 160px;
+    right: unset !important;
+}
+
+@media screen and (max-width: 500px) {
+    .col4 {
+        width: 100%;
+        text-align: left;
+    }
+}
+
+.conCont i {
+    left: 35px;
+    right: unset !important;
+}
+
+.col4:nth-of-type(2) h5 {
+    text-align: left;
+}
+
+.col4:nth-of-type(3) h5 {
+    margin: 10px 0 20px 60px;
+    text-align: left;
+}
+
+fieldset {
+    direction: ltr
+}
+
+legend {
+    text-align: left !important;
+}
+
+.checkmark {
+    left: -30px !important;
+}
+
+.fixedIcon {
+    right: 0;
+    direction: rtl;
+    left: unset;
+}
+
+.fixedNav {
+    left: 0;
+    direction: ltr;
+    right: unset;
+}
+
+.fixedIcon .iconDes {
+    right: 70px;
+    left: unset;
+}
+
+.fixedIcon .iconDes::before {
+    right: -20px;
+    border-left: 10px solid var(--main-color2);
+    border-right: 10px solid transparent;
+}
+
+.fixedNav .iconDes.hideSpan {
+    left: 70px;
+    right: unset;
+}
+
+.fixedNav .iconDes.hideSpan::before {
+    left: -20px;
+    right: unset;
+    border-left: 10px solid transparent;
+    border-right: 10px solid var(--main-color2);
+}
+
+.fSpanbtn {
+    right: unset;
+    left: 15px;
+}
+
+.full-carousel-item.active .carouselContent {
+    left: 4%;
+    right: unset;
+    text-align: left;
+}
+
+.carouselContent p {
+    text-align: left;
+}

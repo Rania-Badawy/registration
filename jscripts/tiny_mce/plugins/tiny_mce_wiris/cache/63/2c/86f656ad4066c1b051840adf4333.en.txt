@@ -1,0 +1,1 @@
+{"result":{"text":"fraction numerator x subscript 2 and x subscript 1 over denominator x subscript 1 superscript 2 minus sign x subscript 1 end fraction equals fraction numerator 5 over denominator 3 x end fraction"},"status":"ok"}

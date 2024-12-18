@@ -1,0 +1,191 @@
+ /*
+ * Explr v1.4
+ * jQuery Simple Tree Plugin
+ *
+ * Copyright 2010 Amatyr4n
+ * http://codecanyon.net/user/amatyr4n
+ *
+ * licensed under Envato licenses
+ * http://wiki.envato.com/support/legal-terms/licensing-terms/
+ */
+
+.explr-tree * {
+	margin: 0;
+	padding: 0;
+}
+
+.explr-tree, 
+.explr-tree ol,
+.explr-tree ul {
+	display: block;
+	font-family: Ubuntu, Helvetica, Tahoma, sans-serif;
+	font-size: 12px;
+	letter-spacing: normal;
+	line-height: 12px;
+	list-style: none;
+	margin: 0;
+	padding-bottom: 0;
+	padding-left: 20px;
+	padding-top: 5px;
+	position: relative;
+}
+
+.explr-tree {
+	background: #fff;
+/*	border: 1px solid #999;*/
+	overflow: auto;
+}
+
+.explr-tree li {
+	background: url("../images/pc.de/folder.png") 16px 2px no-repeat;
+	display: block;
+	position: relative;
+	white-space: nowrap;
+}
+
+.explr-tree li a {
+	color: #555;
+	display: block;
+	font-size: 12px;
+	margin-left: 30px;
+	padding: 3px 0 5px 8px;
+	text-decoration: none;
+}
+
+.explr-tree li a:hover {
+	color: #ff0084;
+	text-decoration: underline;
+}
+
+.explr-line {
+	border-left: 1px dotted #999;
+	border-bottom: 1px dotted #999;
+	height: 22px;
+	position: absolute;
+	margin-left: 0;
+	margin-top: -12px;
+	width: 12px;
+}
+
+.explr-tree ol>li:first-child>.explr-line,
+.explr-tree ul>li:first-child>.explr-line {
+	margin-top: -8px;
+	height: 18px;
+}
+
+.explr-line-fix {
+	border-left: 1px dotted #999;
+}
+
+.explr-plus {
+	background: url("../images/pc.de/plus.png") 0 0 no-repeat;
+	height: 16px;
+	margin-left: -8px;
+	margin-top: 2px;
+	position: absolute;
+	width: 40px;
+	z-index: 1;
+}
+
+.explr-minus { background-image: url("../images/pc.de/busy.png"); }
+
+
+/* Menu icons: */
+
+.explr-tree .icon_text > li, .explr-tree li.icon_text { background-image: url("../images/pc.de/attibutes.png"); }
+.explr-tree .icon_address > li, .explr-tree li.icon_address { background-image: url("../images/pc.de/address.png"); }
+.explr-tree .icon_archives > li, .explr-tree li.icon_archives { background-image: url("../images/pc.de/archives.png"); }
+.explr-tree .icon_badge > li, .explr-tree li.icon_badge { background-image: url("../images/pc.de/bestseller.png"); }
+.explr-tree .icon_bank > li, .explr-tree li.icon_bank { background-image: url("../images/pc.de/bank.png"); }
+.explr-tree .icon_basket > li, .explr-tree li.icon_basket { background-image: url("../images/pc.de/basket.png"); }
+.explr-tree .icon_board > li, .explr-tree li.icon_board { background-image: url("../images/pc.de/order.png"); }
+.explr-tree .icon_board2 > li, .explr-tree li.icon_board2 { background-image: url("../images/pc.de/order-1.png"); }
+.explr-tree .icon_book > li, .explr-tree li.icon_book { background-image: url("../images/pc.de/library.png"); }
+.explr-tree .icon_bookmark > li, .explr-tree li.icon_bookmark { background-image: url("../images/pc.de/bookmark.png"); }
+.explr-tree .icon_business > li, .explr-tree li.icon_business { background-image: url("../images/pc.de/business-contact.png"); }
+.explr-tree .icon_calendar > li, .explr-tree li.icon_calendar { background-image: url("../images/pc.de/calendar.png"); }
+.explr-tree .icon_card > li, .explr-tree li.icon_card { background-image: url("../images/pc.de/credit-card.png"); }
+.explr-tree .icon_card2 > li, .explr-tree li.icon_card2 { background-image: url("../images/pc.de/my-account.png"); }
+.explr-tree .icon_chain > li, .explr-tree li.icon_chain { background-image: url("../images/pc.de/link.png"); }
+.explr-tree .icon_chart > li, .explr-tree li.icon_chart { background-image: url("../images/pc.de/statistics.png"); }
+.explr-tree .icon_check > li, .explr-tree li.icon_check { background-image: url("../images/pc.de/check.png"); }
+.explr-tree .icon_clock > li, .explr-tree li.icon_clock { background-image: url("../images/pc.de/full-time.png"); }
+.explr-tree .icon_comment > li, .explr-tree li.icon_comment { background-image: url("../images/pc.de/comment.png"); }
+.explr-tree .icon_config > li, .explr-tree li.icon_config { background-image: url("../images/pc.de/config.png"); }
+.explr-tree .icon_customers > li, .explr-tree li.icon_customers { background-image: url("../images/pc.de/customers.png"); }
+.explr-tree .icon_cv > li, .explr-tree li.icon_cv { background-image: url("../images/pc.de/cv.png"); }
+.explr-tree .icon_db > li, .explr-tree li.icon_db { background-image: url("../images/pc.de/database.png"); }
+.explr-tree .icon_direction > li, .explr-tree li.icon_direction { background-image: url("../images/pc.de/milestone.png"); }
+.explr-tree .icon_flag > li, .explr-tree li.icon_flag { background-image: url("../images/pc.de/flag.png"); }
+.explr-tree .icon_folder > li, .explr-tree li.icon_folder { background-image: url("../images/pc.de/folder.png"); }
+.explr-tree .icon_folder2 > li, .explr-tree li.icon_folder2 { background-image: url("../images/pc.de/finished-work.png"); }
+.explr-tree .icon_folder3 > li, .explr-tree li.icon_folder3 { background-image: url("../images/pc.de/upcoming-work.png"); }
+.explr-tree .icon_hand > li, .explr-tree li.icon_hand { background-image: url("../images/pc.de/freelance.png"); }
+.explr-tree .icon_heart > li, .explr-tree li.icon_heart { background-image: url("../images/pc.de/heart.png"); }
+.explr-tree .icon_help > li, .explr-tree li.icon_help { background-image: url("../images/pc.de/consulting.png"); }
+.explr-tree .icon_home > li, .explr-tree li.icon_home { background-image: url("../images/pc.de/home.png"); }
+.explr-tree .icon_lamp > li, .explr-tree li.icon_lamp { background-image: url("../images/pc.de/lightbulb.png"); }
+.explr-tree .icon_left > li, .explr-tree li.icon_left { background-image: url("../images/pc.de/sign-out.png"); }
+.explr-tree .icon_left2 > li, .explr-tree li.icon_left2 { background-image: url("../images/pc.de/login.png"); }
+.explr-tree .icon_lock > li, .explr-tree li.icon_lock { background-image: url("../images/pc.de/lock.png"); }
+.explr-tree .icon_mail > li, .explr-tree li.icon_mail { background-image: url("../images/pc.de/contact.png"); }
+.explr-tree .icon_mail2 > li, .explr-tree li.icon_mail2 { background-image: url("../images/pc.de/email.png"); }
+.explr-tree .icon_palette > li, .explr-tree li.icon_palette { background-image: url("../images/pc.de/drawings.png"); }
+.explr-tree .icon_pencil > li, .explr-tree li.icon_pencil { background-image: url("../images/pc.de/edit.png"); }
+.explr-tree .icon_pencil2 > li, .explr-tree li.icon_pencil2 { background-image: url("../images/pc.de/pencil.png"); }
+.explr-tree .icon_phone > li, .explr-tree li.icon_phone { background-image: url("../images/pc.de/phone.png"); }
+.explr-tree .icon_photo > li, .explr-tree li.icon_photo { background-image: url("../images/pc.de/photography.png"); }
+.explr-tree .icon_print > li, .explr-tree li.icon_print { background-image: url("../images/pc.de/print.png"); }
+.explr-tree .icon_project > li, .explr-tree li.icon_project { background-image: url("../images/pc.de/project.png"); }
+.explr-tree .icon_refresh > li, .explr-tree li.icon_refresh { background-image: url("../images/pc.de/refresh.png"); }
+.explr-tree .icon_right > li, .explr-tree li.icon_right { background-image: url("../images/pc.de/sign-in.png"); }
+.explr-tree .icon_right2 > li, .explr-tree li.icon_right2 { background-image: url("../images/pc.de/logout.png"); }
+.explr-tree .icon_showreel > li, .explr-tree li.icon_showreel { background-image: url("../images/pc.de/showreel.png"); }
+.explr-tree .icon_star > li, .explr-tree li.icon_star { background-image: url("../images/pc.de/star.png"); }
+.explr-tree .icon_tag > li, .explr-tree li.icon_tag { background-image: url("../images/pc.de/tag.png"); }
+.explr-tree .icon_text2 > li, .explr-tree li.icon_text2 { background-image: url("../images/pc.de/issue.png"); }
+.explr-tree .icon_text3 > li, .explr-tree li.icon_text3 { background-image: url("../images/pc.de/future-projects.png"); }
+.explr-tree .icon_text4 > li, .explr-tree li.icon_text4 { background-image: url("../images/pc.de/old-versions.png"); }
+.explr-tree .icon_user > li, .explr-tree li.icon_user { background-image: url("../images/pc.de/user.png"); }
+.explr-tree .icon_world > li, .explr-tree li.icon_world { background-image: url("../images/pc.de/world.png"); }
+.explr-tree .icon_zoom > li, .explr-tree li.icon_zoom { background-image: url("../images/pc.de/zoom.png"); }
+
+
+/* IE Hack Fixes: */
+
+.explr-ie, 
+.explr-ie ol,
+.explr-ie ul {
+	margin-left: 4px;
+	padding-left: 16px;
+	position: static;
+}
+
+.explr-ie ol,
+.explr-ie ul {
+	overflow: hidden;
+}
+
+.explr-ie {
+	padding-top: 20px;
+}
+
+.explr-ie .explr-line, 
+.explr-ie .explr-plus {
+	top: 0;
+	left: 4px;
+}
+
+.explr-ie li {
+	height: auto !important;
+	height: 24px;
+	*padding-top: 12px;
+	_padding-top: 0;
+}
+
+.explr-ie li a {
+	*position: absolute;
+	_position: static;
+	*top: 0;
+	_top: auto;
+}

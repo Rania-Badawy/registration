@@ -1,0 +1,376 @@
+<?php
+class Report_Test_Model extends CI_Model{
+	 private $Contact_ID     = 0 ;
+	 private $Name           = '' ;
+	 private $Gender         = 0;
+	private $Encryptkey      = '' ;
+	private $Token           = '' ;
+	function __construct()
+    {
+	   parent::__construct();
+	   $this->Date       = date('Y-m-d H:i:s');
+	   $this->Encryptkey = $this->config->item('encryption_key');
+	   $this->Token      = $this->get_token();
+    }
+	////////get_token
+	private function get_token()
+	{
+	   $this->Token            = md5($this->Encryptkey.uniqid(mt_rand()).microtime()) ;
+	   return	$this->Token ; 
+	}
+	public function show_elec_homework($Lang)
+	{
+		if((string)$Lang ==='english')
+		 {
+			$this->db->select('elec_home.contact_Name,elec_home.test_Name,elec_home.subject_Name,elec_home.row_level_Name,elec_home.IsActive,elec_home.test_Degree,elec_home.config_semester_Name,test.Date_Stm,class.Name_en as class_name');
+		 }
+		 else{
+			$this->db->select('elec_home.contact_Name,elec_home.test_Name,elec_home.subject_Name,elec_home.row_level_Name,elec_home.IsActive,elec_home.test_Degree,elec_home.config_semester_Name,test.Date_Stm,class.Name as class_name');
+		 }
+        
+		$this->db->from('vw_home_select as elec_home');
+		$this->db->join('test','test.ID = elec_home.test_ID');
+		$this->db->join('class','class.ID = elec_home.classID');
+		$this->db->order_by("elec_home.contact_ID", "desc"); 
+	    $Result = $this->db->get();	
+		if($Result->num_rows()>0)
+	    {			
+			$ReturnResult = $Result->result() ;
+			return $ReturnResult ;  
+		}else{
+			return 0 ;  
+		}
+	}
+	public function show_homework($Lang)
+	{
+		if((string)$Lang ==='english')
+		 {
+		$this->db->select('homework.ID,homework.title,homework.content,homework.attach,homework.date_homework,homework.token,contact.Name as emp,subject.Name as subject,class.Name_en as class_name,level.Name_en as level_name ,row.Name_en as row_name ');
+		 }
+		 else{
+		$this->db->select('homework.ID,homework.title,homework.content,homework.attach,homework.date_homework,homework.token,contact.Name as emp,subject.Name as subject,class.Name as class_name,level.Name as level_name,row.Name as row_name');
+		 }
+		$this->db->from('clerical_homework as homework');
+		$this->db->join('config_emp','homework.subjectEmpID = config_emp.ID');
+		$this->db->join('contact','config_emp.EmpID = contact.ID');
+		$this->db->join('subject','subject.ID = config_emp.SubjectID');
+		$this->db->join('class','class.ID = homework.classID');
+		$this->db->join('row_level','row_level.ID = config_emp.RowLevelID');
+		$this->db->join('row','row.ID = row_level.Row_ID');
+		$this->db->join('level','level.ID = row_level.Level_ID');
+		$this->db->order_by('contact.ID','DESC');
+		$this->db->group_by('homework.ID');
+		$Result = $this->db->get();
+		if($Result->num_rows()>0)
+		{			
+			$ReturnResult = $Result->result() ;
+			return $ReturnResult ;  
+		}else{
+			return 0 ;  
+		}	
+	}
+	public function show_test($Lang)
+	{
+		if((string)$Lang ==='english')
+		 {
+			$this->db->select('elec_home.contact_Name,elec_home.test_Name,elec_home.subject_Name,elec_home.row_level_Name,elec_home.IsActive,elec_home.test_Degree,elec_home.config_semester_Name,test.Date_Stm');
+		 }
+		 else{
+			$this->db->select('elec_home.contact_Name,elec_home.test_Name,elec_home.subject_Name,elec_home.row_level_Name,elec_home.IsActive,elec_home.test_Degree,elec_home.config_semester_Name,test.Date_Stm');
+		 }
+        
+		$this->db->from('vw_test_select as elec_home');
+		$this->db->join('test','test.ID = elec_home.test_ID');
+		$this->db->order_by("elec_home.contact_ID", "desc"); 
+	    $Result = $this->db->get();	
+		if($Result->num_rows()>0)
+	    {			
+			$ReturnResult = $Result->result() ;
+			return $ReturnResult ;  
+		}else{
+			return 0 ;  
+		}
+	}
+ 
+    
+	////get_level
+	public function get_level($Lang = NULL )
+	{
+		if($Lang == 'arabic')
+		{
+		  $this->db->select('ID ,Name ,Token');    
+		  $this->db->from('level');
+		  $this->db->where('Is_Active',1);
+		}
+		else{
+		      $this->db->select('ID ,Name_en AS Name ,Token');    
+		      $this->db->from('level');
+		      $this->db->where('Is_Active',1);
+			}
+			  $query = $this->db->get();			
+			  if($query->num_rows() >0)
+			  {return $query->result();}else{return FALSE ;}
+	}
+    
+/////// get_row_level_school_active
+	public function get_row_level_school_active($Lang = NULL  ,$LevelID =0)
+	{
+		$Name = 'Name' ; 
+		if($Lang == 'english'){$Name = 'Name_en' ;}
+		$query = $this->db->query("
+		 SELECT
+		 level.ID         AS LevelID ,
+		 row.ID           AS RowID ,
+		 level.".$Name."  AS LevelName ,
+		 row.".$Name."    AS RowName ,
+		 row_level.ID     As RowLevelID 
+		 FROM 
+		 row_level
+		 INNER JOIN row              ON row_level.Row_ID        = row.ID
+		 INNER JOIN level            ON row_level.Level_ID      = level.ID
+		 INNER JOIN school_row_level ON row_level.ID = school_row_level.RowLevelID AND school_row_level.schoolID = '".$this->session->userdata('SchoolID')."' 
+		 WHERE level.Is_Active = 1  AND  
+			 level.ID      = IFNULL($LevelID,level.ID)
+		 ")->result();
+		if(sizeof($query)> 0 ){return $query;}else{ return  FALSE  ;}
+	}
+	
+	////////////////////////////////////
+	public function get_class_school_active($Lang = NULL,$RowLevelID =0 )
+	{
+		$Name = 'Name' ; 
+		if($Lang == 'english'){$Name = 'Name_en' ;}
+		  $query = $this->db->query("SELECT
+		  class.ID  AS ClassID ,
+		  class. ".$Name." AS ClassName 
+		  FROM class
+		  INNER JOIN school_class ON class.ID = school_class.ClassID AND school_class.SchoolID = '".$this->session->userdata('SchoolID')."'
+		  INNER JOIN class_table ON class.ID = class_table.ClassID and  class_table.SchoolID = '".$this->session->userdata('SchoolID')."'
+		  where   class_table.RowLevelID  = IFNULL($RowLevelID,class_table.RowLevelID ) group by class_table.ClassID 
+		   ");			
+		  if($query->num_rows() >0)
+		  {return $query->result();}else{return FALSE ;}
+	}
+	
+	public function report_student_eval($Lang = NULL,$LevelID  = 0  ,$RowLevelID  = 0 , $classID  = 0 ,$DayDateFrom = 'NULL' , $DayDateTo = 'NULL'  , $limi = 'NULL')
+	{
+		$Lang = $this->session->userdata('language');
+		
+		$NameArray = array("Level"=>"Name AS LevelName" ,"row"=>"Name AS RowName" , "class"=>"Name AS ClassName");
+		if($Lang == "english")
+		{
+			$NameArray = array("Level"=>"Name_en AS LevelName" ,"row"=>" Name_en AS RowName" , "class"=>"Name_en AS ClassName");
+		} 
+		 
+	if($DayDateFrom  == 'NULL' && $DayDateFrom  == 'NULL'  )
+	{
+		$query = $this->db->query("
+		SELECT
+			level.ID AS LevelID,
+			row.ID AS RowID,
+			class.ID AS ClassID,
+			level.".$NameArray['Level'].",
+			row.".$NameArray['row'].",
+			row_level.ID As RowLevelID ,
+			class.ID As ClassID ,
+			class.".$NameArray['class']." ,
+			tb1.ID AS StudentID,
+			tb1.Name AS StudentName,
+			tb2.ID AS FatherID ,
+			tb2.Name AS FatherName ,
+			CONCAT(tb1.Name,' ',tb2.Name) AS FullName ,
+			students_evaluation.ID AS EvalID , 
+			students_evaluation.Absence AS EvalAbsence,
+			students_evaluation.PostsCount AS EvalPosts,
+			students_evaluation.TestMark AS TestMark,
+			students_evaluation.StudentID AS StudentContactID, 
+			students_evaluation.TeacherID, students_evaluation.SubjectID, students_evaluation.Lesson, 
+			students_evaluation.Date AS EvalDate ,
+			tb3.Name AS TeacherName ,
+			subject.Name AS subjectName 
+		FROM contact As tb1
+		INNER JOIN student 				ON tb1.ID = student.Contact_ID
+		INNER JOIN contact AS tb2 		ON student.Father_ID = tb2.ID
+		INNER JOIN class 				ON student.Class_ID = class.ID
+		INNER JOIN row_level 			ON student.R_L_ID = row_level.ID
+		INNER JOIN row 					ON row_level.Row_ID = row.ID
+		INNER JOIN level 				ON row_level.Level_ID = level.ID
+		INNER JOIN students_evaluation 	ON students_evaluation.StudentID = tb1.ID
+		INNER JOIN contact AS tb3 		ON tb3.ID = students_evaluation.TeacherID
+		INNER JOIN subject		 		ON subject.ID = students_evaluation.SubjectID
+		WHERE    student.R_L_ID = IFNULL($RowLevelID,student.R_L_ID)  
+		AND  level.ID      = IFNULL($LevelID,level.ID)
+		AND  student.Class_ID =  IFNULL($classID,student.Class_ID)
+		AND tb1.Isactive = 1 
+		AND tb2.Isactive = 1 
+	 AND tb1.schoolID = '".$this->session->userdata('SchoolID')."' 
+	 group by students_evaluation.ID
+ 		"); 
+	}else{
+	    	$query = $this->db->query("
+		SELECT
+			level.ID AS LevelID,
+			row.ID AS RowID,
+			class.ID AS ClassID,
+			level.".$NameArray['Level'].",
+			row.".$NameArray['row'].",
+			row_level.ID As RowLevelID ,
+			class.ID As ClassID ,
+			class.".$NameArray['class']." ,
+			tb1.ID AS StudentID,
+			tb1.Name AS StudentName,
+			tb2.ID AS FatherID ,
+			tb2.Name AS FatherName ,
+			CONCAT(tb1.Name,' ',tb2.Name) AS FullName ,
+			students_evaluation.ID AS EvalID , 
+			students_evaluation.Absence AS EvalAbsence,
+			students_evaluation.PostsCount AS EvalPosts,
+			students_evaluation.TestMark AS TestMark,
+			students_evaluation.HomeDegree, 
+			students_evaluation.StudentID AS StudentContactID, 
+			students_evaluation.TeacherID, students_evaluation.SubjectID, students_evaluation.Lesson, 
+			students_evaluation.Date AS EvalDate ,
+			tb3.Name AS TeacherName ,
+			subject.Name AS subjectName 
+		FROM contact As tb1
+		INNER JOIN student 				ON tb1.ID = student.Contact_ID
+		INNER JOIN contact AS tb2 		ON student.Father_ID = tb2.ID
+		INNER JOIN class 				ON student.Class_ID = class.ID
+		INNER JOIN row_level 			ON student.R_L_ID = row_level.ID
+		INNER JOIN row 					ON row_level.Row_ID = row.ID
+		INNER JOIN level 				ON row_level.Level_ID = level.ID
+		INNER JOIN students_evaluation 	ON students_evaluation.StudentID = tb1.ID
+		INNER JOIN contact AS tb3 		ON tb3.ID = students_evaluation.TeacherID
+		INNER JOIN subject		 		ON subject.ID = students_evaluation.SubjectID
+		WHERE    student.R_L_ID = IFNULL($RowLevelID,student.R_L_ID)  
+		AND  level.ID      = IFNULL($LevelID,level.ID)
+		AND  student.Class_ID =  IFNULL($classID,student.Class_ID)
+		AND tb1.Isactive = 1 
+		AND tb2.Isactive = 1 
+	 AND tb1.schoolID = '".$this->session->userdata('SchoolID')."' 
+	  
+	 group by students_evaluation.ID
+	 	 
+		");
+	}
+		$NumData = $query->num_rows() ;  
+		if($NumData >0)
+		  {
+			$ReturnData    = $query->result() ;
+			return $ReturnData ; 
+		  }else{ return $NumData ; }
+	}
+	public function report_student_eval_best($Lang = NULL,$LevelID  = 0  ,$RowLevelID  = 0 , $classID  = 0 ,$DayDateFrom = 'NULL' , $DayDateTo = 'NULL'  , $limi = 'NULL')
+	{
+		$Lang = $this->session->userdata('language');
+		
+		$NameArray = array("Level"=>"Name AS LevelName" ,"row"=>"Name AS RowName" , "class"=>"Name AS ClassName");
+		if($Lang == "english")
+		{
+			$NameArray = array("Level"=>"Name_en AS LevelName" ,"row"=>" Name_en AS RowName" , "class"=>"Name_en AS ClassName");
+		} 
+		 
+	if($DayDateFrom  == 'NULL' && $DayDateFrom  == 'NULL'  )
+	{
+		$query = $this->db->query("
+		SELECT
+			level.ID AS LevelID,
+			row.ID AS RowID,
+			class.ID AS ClassID,
+			level.".$NameArray['Level'].",
+			row.".$NameArray['row'].",
+			row_level.ID As RowLevelID ,
+			class.ID As ClassID ,
+			class.".$NameArray['class']." ,
+			tb1.ID AS StudentID,
+			tb1.Name AS StudentName,
+			tb2.ID AS FatherID ,
+			tb2.Name AS FatherName ,
+			CONCAT(tb1.Name,' ',tb2.Name) AS FullName ,
+			students_evaluation.ID AS EvalID , 
+			count(students_evaluation.Absence) AS EvalAbsence,
+			count(students_evaluation.PostsCount) AS EvalPosts,
+			students_evaluation.TestMark AS TestMark,
+			students_evaluation.StudentID AS StudentContactID, 
+			students_evaluation.TeacherID, students_evaluation.SubjectID, students_evaluation.Lesson, 
+			students_evaluation.Date AS EvalDate ,
+			tb3.Name AS TeacherName ,
+			subject.Name AS subjectName 
+		FROM contact As tb1
+		INNER JOIN student 				ON tb1.ID = student.Contact_ID
+		INNER JOIN contact AS tb2 		ON student.Father_ID = tb2.ID
+		INNER JOIN class 				ON student.Class_ID = class.ID
+		INNER JOIN row_level 			ON student.R_L_ID = row_level.ID
+		INNER JOIN row 					ON row_level.Row_ID = row.ID
+		INNER JOIN level 				ON row_level.Level_ID = level.ID
+		INNER JOIN students_evaluation 	ON students_evaluation.StudentID = tb1.ID
+		INNER JOIN contact AS tb3 		ON tb3.ID = students_evaluation.TeacherID
+		INNER JOIN subject		 		ON subject.ID = students_evaluation.SubjectID
+		WHERE    student.R_L_ID = IFNULL($RowLevelID,student.R_L_ID)  
+		AND  level.ID      = IFNULL($LevelID,level.ID)
+		AND  student.Class_ID =  IFNULL($classID,student.Class_ID)
+		AND tb1.Isactive = 1 
+		AND tb2.Isactive = 1 
+	 AND tb1.schoolID = '".$this->session->userdata('SchoolID')."' 
+	 group by students_evaluation.StudentID
+	  order by EvalAbsence asc ,HomeDegree asc ,TestMark asc ,EvalPosts asc
+	 limit 5
+ 		"); 
+	}else{
+	    	$query = $this->db->query("
+		SELECT
+			level.ID AS LevelID,
+			row.ID AS RowID,
+			class.ID AS ClassID,
+			level.".$NameArray['Level'].",
+			row.".$NameArray['row'].",
+			row_level.ID As RowLevelID ,
+			class.ID As ClassID ,
+			class.".$NameArray['class']." ,
+			tb1.ID AS StudentID,
+			tb1.Name AS StudentName,
+			tb2.ID AS FatherID ,
+			tb2.Name AS FatherName ,
+			CONCAT(tb1.Name,' ',tb2.Name) AS FullName ,
+			students_evaluation.ID AS EvalID , 
+			count(students_evaluation.Absence) AS EvalAbsence,
+			count(students_evaluation.PostsCount) AS EvalPosts,
+			students_evaluation.TestMark AS TestMark,
+			students_evaluation.HomeDegree, 
+			students_evaluation.StudentID AS StudentContactID, 
+			students_evaluation.TeacherID, students_evaluation.SubjectID, students_evaluation.Lesson, 
+			students_evaluation.Date AS EvalDate ,
+			tb3.Name AS TeacherName ,
+			subject.Name AS subjectName 
+		FROM contact As tb1
+		INNER JOIN student 				ON tb1.ID = student.Contact_ID
+		INNER JOIN contact AS tb2 		ON student.Father_ID = tb2.ID
+		INNER JOIN class 				ON student.Class_ID = class.ID
+		INNER JOIN row_level 			ON student.R_L_ID = row_level.ID
+		INNER JOIN row 					ON row_level.Row_ID = row.ID
+		INNER JOIN level 				ON row_level.Level_ID = level.ID
+		INNER JOIN students_evaluation 	ON students_evaluation.StudentID = tb1.ID
+		INNER JOIN contact AS tb3 		ON tb3.ID = students_evaluation.TeacherID
+		INNER JOIN subject		 		ON subject.ID = students_evaluation.SubjectID
+		WHERE    student.R_L_ID = IFNULL($RowLevelID,student.R_L_ID)  
+		AND  level.ID      = IFNULL($LevelID,level.ID)
+		AND  student.Class_ID =  IFNULL($classID,student.Class_ID)
+		AND tb1.Isactive = 1 
+		AND tb2.Isactive = 1 
+	 AND tb1.schoolID = '".$this->session->userdata('SchoolID')."' 
+	  
+	 group by students_evaluation.StudentID
+	 order by EvalAbsence asc ,HomeDegree asc ,TestMark asc ,EvalPosts asc
+	 limit 5
+	 	 
+		");
+	}
+		$NumData = $query->num_rows() ;  
+		if($NumData >0)
+		  {
+			$ReturnData    = $query->result() ;
+			return $ReturnData ; 
+		  }else{ return $NumData ; }
+	}
+}
+?>

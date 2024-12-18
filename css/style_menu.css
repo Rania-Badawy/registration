@@ -1,0 +1,11 @@
+ol,ul,li{margin:0;padding:0;border:0;outline:0;font-weight:inherit;font-size:100%;font-family:inherit;vertical-align:baseline}
+ol,ul {list-style:none}
+
+
+.stack > a {background:url(arrow.png) right 9px no-repeat}
+
+li {background:#aaa}
+a {background:transparent;line-height:28px;text-indent:10px;font-size:14px;color:#fff !important;text-decoration:none;font-weight:bold;display:block;height:auto;width:auto;border-top:1px solid #ccc;border-left:1px solid #ccc;border-right:1px solid #999;border-bottom:1px solid #999;height:28px;width:98px;}
+a:hover {border-top:1px solid #999;border-left:1px solid #999;border-right:1px solid #ccc;border-bottom:1px solid #ccc;background: #555;}
+
+

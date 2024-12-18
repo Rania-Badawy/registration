@@ -1,0 +1,429 @@
+
+a {
+  color: inherit;
+  text-decoration: none;
+  outline: none;
+}
+* {
+  box-sizing: border-box;
+}
+ 
+body {
+    background:url('../images/intro-bg-ds2.jpg');
+    width: 100%;
+    height: 100%;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: unset;
+    direction:rtl;
+}
+.div-co {
+    font-size: 17px;
+    position: fixed;
+    top: 45%;
+    left: 50%;
+    -moz-transform: translate(-50% , -50%);
+    -webkit-transform: translate(-50% , -50%);
+    transform: translate(-50% , -50%);
+
+}
+.draw-co-in {
+  background: #fff;
+}
+.draw {
+  padding: 50px;
+  direction: rtl;
+  outline:none;
+  border: none;
+  box-shadow: none;    
+  background: #fff;
+  background-image: 
+  linear-gradient(#40aae6, #40aae6), 
+  linear-gradient(#40aae6, #40aae6), 
+  linear-gradient(#40aae6, #40aae6), 
+  linear-gradient(#40aae6, #40aae6), 
+  
+  linear-gradient(#fff, #fff), 
+  linear-gradient(#fff, #fff), 
+  linear-gradient(#fff, #fff), 
+  linear-gradient(#fff, #fff);
+  
+  background-position: 0 0, 0 0, 0 100%, 0 100%, 
+                       0 0, 0 0, 0 100%, 100% 0;
+  background-size: 1px 0%, 0% 1px, 0% 1px, 1px 0%,  
+                   1px 100%, 100% 1px, 100% 1px,1px 100%;
+  background-color:transparent;
+  background-repeat:no-repeat;
+  transition:0.2s linear;
+}
+
+.draw {
+  background-position: 0 100%, 0 0, 0 100%, 100% 0, 
+                       0 0, 0 0, 0 100%, 100% 0;
+  background-size: 1px 0%, 100% 1px, 0% 1px,1px 0%,  
+                   1px 100%, 100% 1px, 100% 1px,1px 100%;
+  animation: animate 1.4s linear infinite 0.2s;
+}
+
+@keyframes animate {
+  0% {
+  background-position: 0 100%, 0 0, 0 100%, 100% 0, 
+                       0 0, 0 0, 0 100%, 100% 0;
+  background-size: 1px 0%, 100% 1px, 0% 1px,1px 0%,  
+                   1px 100%, 100% 1px, 100% 1px,1px 100%;
+  }
+  40% {
+  background-position: 0 100%, 100% 0, 100% 100%, 100% 0, 
+                       0 0, 0 0, 0 100%, 100% 0;
+  background-size: 1px 0%, 100% 1px, 0% 1px,1px 100%,  
+                   1px 100%, 100% 1px, 100% 1px,1px 100%;
+  }
+  60% {
+  background-position: 0 100%, 100% 0, 100% 100%, 100% 100%, 
+                       0 0, 0 0, 0 100%, 100% 0;
+  background-size: 1px 0%, 0% 1px, 100% 1px,1px 100%,  
+                   1px 100%, 100% 1px, 100% 1px,1px 100%;
+  }
+  70% {
+  background-position: 0 100%, 100% 0, 0% 100%, 100% 100%, 
+                       0 0, 0 0, 0 100%, 100% 0;
+  background-size: 1px 100%, 0% 1px, 100% 1px,1px 0%,  
+                   1px 100%, 100% 1px, 100% 1px,1px 100%;
+  }
+  80% {
+  background-position: 0% 0%, 0% 0, 0% 100%, 100% 100%, 
+                       0 0, 0 0, 0 100%, 100% 0;
+  background-size: 1px 100%, 0% 1px, 0% 1px,1px 0%,  
+                   1px 100%, 100% 1px, 100% 1px,1px 100%;
+  }
+  100% {
+  background-position: 0% 0%, 0 0, 0 100%, 100% 100%, 
+                       0 0, 0 0, 0 100%, 100% 0;
+  background-size: 1px 0%, 100% 1px, 0% 1px,1px 0%,  
+                   1px 100%, 100% 1px, 100% 1px,1px 100%;  
+  }
+}
+
+.cssload-w {
+    position:fixed;
+    background:#fff;
+    z-index:1000000000001;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0
+}
+.cssload-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -moz-transform: translate(-50% , -50%);
+    -webkit-transform: translate(-50% , -50%);
+    transform: translate(-50% , -50%);
+}
+	
+.cssload-whirlpool,
+.cssload-whirlpool::before,
+.cssload-whirlpool::after {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	border: 1px solid rgb(204,204,204);
+	border-left-color: rgb(0,0,0);
+	border-radius: 974px;
+		-o-border-radius: 974px;
+		-ms-border-radius: 974px;
+		-webkit-border-radius: 974px;
+		-moz-border-radius: 974px;
+}
+
+.cssload-whirlpool {
+	margin: -24px 0 0 -24px;
+	height: 49px;
+	width: 49px;
+	animation: cssload-rotate 1150ms linear infinite;
+		-o-animation: cssload-rotate 1150ms linear infinite;
+		-ms-animation: cssload-rotate 1150ms linear infinite;
+		-webkit-animation: cssload-rotate 1150ms linear infinite;
+		-moz-animation: cssload-rotate 1150ms linear infinite;
+}
+
+.cssload-whirlpool::before {
+	content: "";
+	margin: -22px 0 0 -22px;
+	height: 43px;
+	width: 43px;
+	animation: cssload-rotate 1150ms linear infinite;
+		-o-animation: cssload-rotate 1150ms linear infinite;
+		-ms-animation: cssload-rotate 1150ms linear infinite;
+		-webkit-animation: cssload-rotate 1150ms linear infinite;
+		-moz-animation: cssload-rotate 1150ms linear infinite;
+}
+
+.cssload-whirlpool::after {
+	content: "";
+	margin: -28px 0 0 -28px;
+	height: 55px;
+	width: 55px;
+	animation: cssload-rotate 2300ms linear infinite;
+		-o-animation: cssload-rotate 2300ms linear infinite;
+		-ms-animation: cssload-rotate 2300ms linear infinite;
+		-webkit-animation: cssload-rotate 2300ms linear infinite;
+		-moz-animation: cssload-rotate 2300ms linear infinite;
+}
+
+
+
+@keyframes cssload-rotate {
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@-o-keyframes cssload-rotate {
+	100% {
+		-o-transform: rotate(360deg);
+	}
+}
+
+@-ms-keyframes cssload-rotate {
+	100% {
+		-ms-transform: rotate(360deg);
+	}
+}
+
+@-webkit-keyframes cssload-rotate {
+	100% {
+		-webkit-transform: rotate(360deg);
+	}
+}
+
+.div-co button{
+    border: 0;
+    background: #03A9F4;
+    color: #fff;
+    padding: 20px;
+    cursor: pointer;
+    border-radius: 0px;
+    border-bottom: 3px solid #0f88bf;
+    display:inline-block;
+    margin-left:10px;
+    width: 225px;
+}
+.div-co select{
+    border: 0;
+    background: #ffffff;
+    color: #03a9f4;
+    padding: 20px;
+    cursor: pointer;
+    border-radius: 0px;
+    border-bottom: 1px solid #03a9f4;
+    display:inline-block;
+    outline: none;
+    width: 225px;
+}
+.div-co img {
+    margin-bottom: 35px;
+}
+@media (max-width: 1130px) {
+    .div-co button {
+        margin-bottom:10px;
+        margin-left:0;
+    }
+}
+#particles {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+#particles .pg-canvas {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    opacity:0.6;
+}
+.container {
+    background: #fff;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    z-index: 2;
+    position: relative;
+    padding: 25px 35px;
+}
+.mb-4, .my-4 {
+    margin-bottom: 1.5rem!important;
+}
+.mt-5, .my-5 {
+    margin-top: 3rem!important;
+}
+.z-depth-1-half {
+    -webkit-box-shadow: 0 16px 24px 2px rgba(0,0,0,0.14), 0 6px 30px 5px rgba(0,0,0,0.12), 0 8px 10px -7px rgba(0,0,0,0.2);
+    box-shadow: 0 16px 24px 2px rgba(0,0,0,0.14), 0 6px 30px 5px rgba(0,0,0,0.12), 0 8px 10px -7px rgba(0,0,0,0.2);
+}
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+.container p , .container ul li{
+    line-height:30px;
+}
+.container ul li {
+    list-style: disc;
+}
+.container ul {
+    padding: 0 20px 0 0;
+    margin: 0;
+}
+.btn-link, .btn-link:active, .btn-link:focus, .btn-link:hover {
+    border-color: #80bbe7;
+    border-radius: 25px;
+    color: #68a2ce;
+    text-decoration: none;
+}
+.btn-link i{
+    margin-right: 5px;
+}
+.owl-carousel .owl-item {
+    float: left;
+    padding: 10px;
+}
+footer a {
+    color:#80bbe7;
+}
+
+/***** sign-up-st  ******/
+/***** sign-up-st  ******/
+/***** sign-up-st  ******/
+
+.sign-up-st h4 i.fa-angle-left{
+    border: 1px solid #c3c3c3;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    line-height: 27px;
+    text-align: center;
+    margin-left: 10px;
+    color: #c3c3c3;
+}
+
+.sign-up-st h4{
+    color: #2a5082;
+    margin-bottom: 30px;
+}
+.sign-up-st .form-group{
+    margin-bottom: 30px;
+}
+.sign-up-st .form-control{
+    height: 50px;
+    box-shadow: none
+}
+.sign-up-st .btn {
+    padding: 15px 32px;
+}
+.sign-up-st .btn-primary , .sign-up-st .btn-primary:hover , .sign-up-st .btn-primary:focus {
+    background-color: #23c0f5;
+    border-color: #23c0f5;
+}
+.sign-up-st .btn-default , .sign-up-st .btn-default:hover , .sign-up-st .btn-default:focus{
+    color: #fff;
+    background-color: #808080;
+    border-color: #808080;
+    margin-left: 15px;
+}
+/* The checkbox */
+.checkbox-co {
+    display: inline-block;
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-left: 15px;
+    width: 150px;
+    text-align: center
+}
+.checkbox-co img{
+    margin-bottom: 15px;
+}
+.checkbox-ds {
+    display:inline-block;
+    position: relative;
+    padding-right: 35px;
+    margin-bottom: 12px;
+    cursor: pointer; 
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+}
+
+/* Hide the browser's default checkbox */
+.checkbox-ds input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #ccc;
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox-ds:hover input ~ .checkmark {
+    background-color: #fff;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkbox-ds input:checked ~ .checkmark {
+    background-color: #fff;
+    border-color: #2196F3;
+    color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox-ds input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox-ds .checkmark:after {
+    left: 9px;
+    top: 4px;
+    width: 6px;
+    height: 12px;
+    border: solid #2196F3;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.checkbox-co.checked-bd { 
+    border: 1px solid #2196F3; 
+}
+

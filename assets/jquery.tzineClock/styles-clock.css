@@ -1,0 +1,17 @@
+
+#fancyClock{
+	margin:40px auto;
+	height:200px;
+	width:90%;
+	border:rgba(51,51,51,0.4) 1px solid;
+	padding:15px 55px 15px 15px ;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-ms-border-radius:5px;
+	-o-border-radius:5px;
+	-webkit-border-radius:5px;
+	
+}
+
+
+

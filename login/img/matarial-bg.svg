@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="89" height="77" viewBox="0 0 89 77">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_1" data-name="Rectangle 1" width="89" height="77" transform="translate(-10604 -9662)" fill="#fff" opacity="0.34"/>
+    </clipPath>
+    <linearGradient id="linear-gradient" x1="-0.039" y1="0.375" x2="0.861" y2="0.697" gradientUnits="objectBoundingBox">
+      <stop offset="0"/>
+      <stop offset="1" stop-color="#36393e"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="0.15" y1="0.173" x2="0.718" y2="0.658" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#74d1fb"/>
+      <stop offset="1" stop-color="#329ef7"/>
+    </linearGradient>
+  </defs>
+  <g id="matarial-bg" transform="translate(10604 9662)" clip-path="url(#clip-path)">
+    <g id="_1" data-name="1" transform="translate(-10565.709 -9687.171) rotate(45)">
+      <path id="Path" d="M72.671,46.14A37,37,0,0,1,20.828,61.588C1.949,50.866-5.455,26.556,4.3,7.3s16.556,4.491,35.434,15.214S82.426,26.881,72.671,46.14Z" transform="matrix(0.105, -0.995, 0.995, 0.105, 19.656, 76.059)" fill="url(#linear-gradient)"/>
+      <path id="Path-2" data-name="Path" d="M67.558,55.279C51.588,73.214,38.023,84.306,17.774,71.938S-5.934,34.992,10.036,17.057,55.368-5.392,75.607,6.976,83.529,37.337,67.558,55.279Z" transform="translate(6.317 4.556)" fill="url(#linear-gradient-2)"/>
+    </g>
+  </g>
+</svg>

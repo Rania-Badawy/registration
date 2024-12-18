@@ -1,0 +1,1 @@
+{"result":{"text":"2 س squared space plus space 3 ص cubed space equals\nس plus 3 equals"},"status":"ok"}

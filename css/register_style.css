@@ -1,0 +1,140 @@
+/* rania */
+
+.p-0 {
+    padding: 0;
+}
+.m-0{
+    margin: 0;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.register_form_content {
+    margin-bottom: 24px;
+}
+
+.register_form_content .control-label {
+    background-color: var(--main-color2);
+    color: #fff;
+    height: 34px;
+    margin: 0px;
+    display: flex;
+    padding: 0 8px;
+    align-items: center;
+    direction: inherit;
+    font-size:12px !important;
+}
+
+.register_form_content .form-control {
+    border-radius: 0;
+    margin-top: 0;
+    padding: 0 5px !important;
+}
+
+.subtitle-regist {
+    margin: 10px 20px 34px;
+    color: #313131;
+    font-size: 18px;
+}
+
+.register_form_content.check_regist_form .control-label {
+    background-color: #eee !important;
+    color: #40aae6 !important;
+}
+
+.btn_regist {
+    min-width: 100px;
+    font-size: 15px;
+    padding: 7px;
+    border: 1px solid transparent !important;
+    border-radius: 4px !important;
+}
+
+.btn_regist_Previous {
+    min-width: 100px;
+    font-size: 15px;
+    padding: 7px;
+    background-color: #303030;
+}
+
+.btn_regist_Add {
+    min-width: 100px;
+    font-size: 15px;
+    padding: 7px;
+    background-color: #f0ad4e;
+}
+
+.title_register h5 {
+    margin: 0 0 17px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+}
+
+.title_register h5 i {
+    margin-left: 7px;
+    border: 1px solid #ababab;
+    padding-top: 3px;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    font-size: 13px;
+    color: #000;
+    text-align: center;
+}
+
+.deleteStudent {
+    position: absolute;
+    left: 15px;
+    margin-top: 0;
+    font-size: 12px;
+    padding: 5px 7px !important;
+    border-radius: 5px !important;
+    background-color: #b90000 !important;
+    cursor: pointer !important;
+    z-index: 5 !important;
+}
+
+.collaps-input {
+    border: 0 !important;
+    box-shadow: none !important;
+    margin: 0 !important;
+    min-height: 45px !important;
+    background-color: #fff;
+    border-radius: 0;
+}
+
+.panel_regist_all {
+    border: 0 !important;
+    margin-bottom: 20px !important;
+}
+
+.panel_regist_all .panel-title a {
+    text-decoration: none !important;
+    width: 100%;
+    display: block;
+    padding: 10px 15px;
+    line-height: 22px;
+    font-size: 18px;
+    font-family:  'Neo Sans Arabic', sans-serif !important; ;
+}
+
+.panel_regist_all .panel-title a i {
+    font-size: 13px;
+    padding-top: 5px;
+}
+
+.panel_regist_all .panel-regist {
+    background-color: var(--main-color2) !important;
+    color: #fff !important;
+    padding: 0;
+}
+
+.panel_regist_all .panel-body {
+    min-height: 45px;
+    background-color: #fff;
+    border-top: 0 !important;
+    border: 1px solid #efefef;
+}

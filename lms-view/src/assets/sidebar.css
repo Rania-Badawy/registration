@@ -1,0 +1,72 @@
+.sidebar{
+    background: #fff;
+    min-height: 100vh;
+    overflow-y: auto;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 270px;
+    border: 1px solid #eaeaea;
+    padding: 15px 0;
+}
+.sidebar .upperside{text-align: center;}
+.btnToggle{
+    position: absolute;
+    left: 15px;
+    color: #d9dde1;
+    margin-bottom: 20px;
+    top: 10px
+}
+.sidebar .upperside img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+.upperSpans{
+    display: block;
+    margin: 5px;
+    color: #868e96
+}
+.studentName{
+    margin-bottom: 10px;
+}
+.sidebar.close{
+    width: 50px;
+    transition: .5s ease-in-out;
+    text-align: center;
+}
+.close h4,
+.close .upperSpans,
+.close .rate{
+    display: none;
+}
+.close ul li a,
+.close ul li span{
+    display: none;
+}
+.close img{
+    width: 30px !important;
+    height: 30px !important;
+}
+.sidebar ul {
+    background-color: #f9f9f9;
+}
+li{
+    padding: 10px 0;
+}
+li i {
+    padding-left: 5px;
+}
+.submenu{
+    background-color: #fff !important;
+    transition: 50s ease-in-out;
+    transition: 0.5s linear;
+}
+
+.submenu li:hover{
+    background-color: #868e96;
+    color: #fff;
+}
+.submenu li a{
+    padding-right: 15px;
+}

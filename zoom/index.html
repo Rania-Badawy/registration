@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+    <head>
+        <!-- Required Meta Tags -->
+        <meta name="language" content="ar">
+        <meta http-equiv="x-ua-compatible" content="text/html" charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="The Description of This Page Goes Right Here and its !Important" />
+        <meta name="keywords" content="keywords,goes,here,for,this,web,site,its,!important,and,keep,it,dynamic" />
+        <title>Tornado Starter Template</title>
+        <!-- Open Graph Meta Tags -->
+        <meta property="og:title" content="This Page title Goes Here" />
+        <meta property="og:description" content="The Description of This Page Goes Right Here and its !Important" />
+        <meta property="og:url" content="http://domain.com/page-url/" />
+        <meta property="og:image" content="img/logo.png" />
+        <meta name="twitter:image" content="img/logo.png">
+        <meta name="facebook:description" content="The Description of This Page Goes Right Here and its !Important" />
+        <!-- Other Meta Tags -->
+        <meta name="robots" content="index, follow" />
+        <meta name="copyright" content="Sitename Goes Here">
+		<link rel="shortcut icon" type="image/png"  href="img/logo.png">
+        <!-- Required CSS Files -->
+        <link href="css/tornado-icons.css" rel="stylesheet" />
+        <link href="css/tornado-rtl.css" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Modal Box -->
+        <div class="modal-box" id="add-session">
+            <!-- Container -->
+            <form class="modal-content form-ui">
+                <!-- Headline -->
+                <h2 class="modal-head">
+                    اضافة جلسة جديدة
+                    <button class="close-modal ti-close"></button>
+                </h2>
+                <!-- Content -->
+                <div class="modal-body">
+                    <div class="row">
+                        <!-- Form Control -->
+                        <label class="col-4 col-s-3">اسم الجلسة</label>
+                        <div class="col-8 col-s-9"><input type="text" placeholder=""></div>
+                        <!-- Form Control -->
+                        <label class="col-4 col-s-3">تاريخ البداية</label>
+                        <div class="col-8 col-s-9"><input type="date" placeholder=""></div>
+                        <!-- Form Control -->
+                        <label class="col-4 col-s-3">المدة بالدقائق</label>
+                        <div class="col-8 col-s-9"><input type="number" placeholder=""></div>
+                        <!-- Form Control -->
+                        <label class="col-4 col-s-3">كلمة المرور</label>
+                        <div class="col-8 col-s-9"><input type="padding" placeholder=""></div>
+                        <!-- Form Control -->
+                        <label class="col-4 col-s-3"> أجندة العمل</label>
+                        <div class="col-8 col-s-9"><input type="text" placeholder=""></div>
+                        <!-- // Form Control -->
+                    </div>
+                </div>
+                <!-- Footer -->
+                <div class="modal-footer">
+                    <a href="#" class="btn round-corner small primary">اضافة الجلسة</a>
+                    <a href="#" class="btn round-corner small danger close-modal">اغلاق النافذة</a>
+                </div>
+            </form>
+            <!--// Container -->
+        </div>
+        <!-- // Modal Box -->
+
+        <!-- Page Content -->
+        <div class="container seasson-page">
+            <!-- Header -->
+            <header class="tornado-header flex-box align-center-y align-between">
+                <a href="#" class="logo"><img src="img/logo.png" alt=""></a>
+                <div class="action-btns">
+                    <a href="#" class="btn small primary round-corner" data-modal="add-session">اضافة جلسة</a>
+                    <!-- Dropdown Button -->
+                    <div class="dropdown">
+                        <a href="#" class="dropdown-btn btn small round-corner ti-arrow-down-chevron"><img src="https://via.placeholder.com/50x50" alt=""> مرحبا, عبدالله رمضان</a>
+                        <ul class="dropdown-list">
+                            <li><a href="#" class="ti-power">تسجيل الخروج</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+            <!-- // Header -->
+
+            <!-- Page Title -->
+            <h1 class="h4 tx-align-center page-title">قائمة الجلسات</h1>
+            <!-- // Page Title -->
+
+            <!-- Tabel Wraper -->
+            <div class="responsive-table">
+                <!-- Table -->
+                <table class="table bordered striped">
+                    <!-- Head -->
+                    <thead>
+                        <tr>
+                            <th class="primary-bg">اسم الجلسة</th>
+                            <th class="primary-bg">الحالة</th>
+                            <th class="primary-bg">تاريخ البداية</th>
+                            <th class="primary-bg">المدة</th>
+                            <th class="primary-bg">المنطقة الزمنية</th>
+                            <th class="primary-bg">تاريخ الإضافة</th>
+                            <th class="primary-bg">إنضمام</th>
+                            <th class="primary-bg">حذف</th>
+                        </tr>
+                    </thead>
+                    <!-- Table Body -->
+                    <tbody>
+                        <!-- Row -->
+                        <tr>
+                            <th>درس اللغة العربية - أ/ محمد عبد العظيم - الصف الأول الثانوي</th>
+                            <th><span class="badge success">Finished</span></th>
+                            <th><span class="info-icon ti-calendar">2020-06-27</span></th>
+                            <th><span class="info-icon ti-clock">15</span></th>
+                            <th><span class="badge dark">Africa/Cairo</span></th>
+                            <th><span class="info-icon ti-calendar">2020-06-27</span></th>
+                            <th><a href="#" class="btn small circle ti-plus success"></a></th>
+                            <th><a href="#" class="btn small circle ti-delete danger"></a></th>
+                        </tr>
+                        <!-- Row -->
+                        <tr>
+                            <th>درس اللغة العربية - أ/ محمد عبد العظيم - الصف الأول الثانوي</th>
+                            <th><span class="badge success">Finished</span></th>
+                            <th><span class="info-icon ti-calendar">2020-06-27</span></th>
+                            <th><span class="info-icon ti-clock">15</span></th>
+                            <th><span class="badge dark">Africa/Cairo</span></th>
+                            <th><span class="info-icon ti-calendar">2020-06-27</span></th>
+                            <th><a href="#" class="btn small circle ti-close gray"></a></th>
+                            <th><a href="#" class="btn small circle ti-delete danger"></a></th>
+                        </tr>
+                        <!-- Row -->
+                        <tr>
+                            <th>درس اللغة العربية - أ/ محمد عبد العظيم - الصف الأول الثانوي</th>
+                            <th><span class="badge success">Finished</span></th>
+                            <th><span class="info-icon ti-calendar">2020-06-27</span></th>
+                            <th><span class="info-icon ti-clock">15</span></th>
+                            <th><span class="badge dark">Africa/Cairo</span></th>
+                            <th><span class="info-icon ti-calendar">2020-06-27</span></th>
+                            <th><a href="#" class="btn small circle ti-plus success"></a></th>
+                            <th><a href="#" class="btn small circle ti-delete danger"></a></th>
+                        </tr>
+                        <!-- Row -->
+                        <tr>
+                            <th>درس اللغة العربية - أ/ محمد عبد العظيم - الصف الأول الثانوي</th>
+                            <th><span class="badge success">Finished</span></th>
+                            <th><span class="info-icon ti-calendar">2020-06-27</span></th>
+                            <th><span class="info-icon ti-clock">15</span></th>
+                            <th><span class="badge dark">Africa/Cairo</span></th>
+                            <th><span class="info-icon ti-calendar">2020-06-27</span></th>
+                            <th><a href="#" class="btn small circle ti-close gray"></a></th>
+                            <th><a href="#" class="btn small circle ti-delete danger"></a></th>
+                        </tr>
+                        <!-- // Row -->
+                    </tbody>
+                    <!-- // Table Body -->
+                </table>
+                <!-- // Table -->
+            </div>
+            <!-- // Tabel Wraper -->
+
+            <!-- Pagination -->
+            <ul class="pagination circles tx-align-center">
+                <li><a href="#" class="ti-arrow-right-c"></a></li>
+                <li class="active"><a href="#">01</a></li>
+                <li><a href="#">02</a></li>
+                <li><a href="#">03</a></li>
+                <li><a href="#">04</a></li>
+                <li><a href="#">05</a></li>
+                <li><a href="#">06</a></li>
+                <li><a href="#">07</a></li>
+                <li><a href="#">08</a></li>
+                <li><a href="#">09</a></li>
+                <li><a href="#">10</a></li>
+                <li><a href="#">11</a></li>
+                <li><a href="#" class="ti-arrow-left-c"></a></li>
+            </ul>
+            <!-- // Pagination -->
+        </div>
+        <!-- // Page Content -->
+
+        <!-- Required JS Files -->
+        <script src="js/tornado.min.js"></script>
+    </body>
+</html>

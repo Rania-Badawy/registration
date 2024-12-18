@@ -1,0 +1,190 @@
+.clock{
+	/* The .clock div. Created dynamically by jQuery */
+	height:200px;
+	width:28%;
+	position:relative;
+	overflow:hidden;
+	display:inline-block;
+	vertical-align:central !important;
+	margin-right:3.9%;
+	box-shadow:rgba(153,153,153,0.5) 0px 0px 3px 3px;
+	-moz-box-shadow:rgba(153,153,153,0.5) 0px 0px 3px 3px;
+	-ms-box-shadow:rgba(153,153,153,0.5) 0px 0px 3px 3px;
+	-o-box-shadow:rgba(153,153,153,0.5) 0px 0px 3px 3px;
+	-webkit-box-shadow:rgba(153,153,153,0.5) 0px 0px 3px 3px;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-ms-border-radius:5px;
+	-o-border-radius:5px;
+	-webkit-border-radius:5px;
+	margin-top:20px;
+	background:#fff;
+	
+}
+#mapdiv {
+	box-shadow:rgba(153,153,153,0.5) 0px 0px 3px 3px;
+	-moz-box-shadow:rgba(153,153,153,0.5) 0px 0px 3px 3px;
+	-ms-box-shadow:rgba(153,153,153,0.5) 0px 0px 3px 3px;
+	-o-box-shadow:rgba(153,153,153,0.5) 0px 0px 3px 3px;
+	-webkit-box-shadow:rgba(153,153,153,0.5) 0px 0px 3px 3px;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-ms-border-radius:5px;
+	-o-border-radius:5px;
+	-webkit-border-radius:5px;
+	margin-top:20px;	
+	}
+#fancyClock {
+	margin:20px auto !important;
+	width:60%;
+	text-align:center;
+	}
+.clock .rotate{
+	/* There are two .rotate divs - one for each half of the background */
+	position:absolute;
+	width:200px;
+	height:200px;
+	top:0;
+	
+}
+
+.rotate.right{
+	display:none;
+	z-index:11;
+}
+
+.clock .bg, .clock .front{
+	width:100px;
+	height:200px;
+	position:absolute;
+	top:0;
+}
+
+.clock .display{
+	/* Holds the number of seconds, minutes or hours respectfully */
+	position:absolute;
+	width:200px;
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	z-index:20;
+	color:#333;
+	font-size:60px;
+	text-align:center;
+	top:85px;
+	
+	/* CSS3 text shadow: */
+}
+
+/* The left part of the background: */
+
+.clock .bg.left{ left:0; }
+
+/* Individual styles for each color: */
+.orange .bg.left{ background:url(img/bg_orange.png) no-repeat left top; }
+.green .bg.left{ background:url(img/bg_green.png) no-repeat left top; }
+.blue .bg.left{	background:url(img/bg_blue.png) no-repeat left top; }
+
+/* The right part of the background: */
+.clock .bg.right{ left:100px; }
+
+.orange .bg.right{ background:url(img/bg_orange.png) no-repeat right top; }
+.green .bg.right{ background:url(img/bg_green.png) no-repeat right top; }
+.blue .bg.right{ background:url(img/bg_blue.png) no-repeat right top; }
+
+
+.clock .front.left{
+	left:0;
+	z-index:10;
+}
+
+
+/* world map */
+
+.ammapAlert 
+{
+    display:table-cell; 
+    vertical-align:middle; 
+    text-align:center; 
+    font-family:verdana,helvetica,arial,sans-serif;
+    font-size:12px;
+    color:#CC0000;
+}
+
+.ammapDescriptionWindow
+{
+   font-size:11px;
+   font-family:verdana,helvetica,arial,sans-serif;    
+   background-color:#FFFFFF;
+   border-style:solid;
+   border-color:#DADADA;
+   border-width:1px;
+   color:#000000;
+   padding:8px;  
+}
+
+.ammapDescriptionTitle
+{
+   font-size:12px;
+   font-weight:bold;
+   font-family:verdana,helvetica,arial,sans-serif;
+   padding-bottom:5px;    
+}
+
+.ammapDescriptionWindowCloseButton
+{
+    
+}
+
+.ammapObjectList ul 
+{
+    padding-left:20px; 
+    list-style:square outside; 
+    color:#999999;
+    font-family:verdana,helvetica,arial,sans-serif;
+    font-size: 12px;
+}
+
+.ammapObjectList ul ul 
+{
+    padding-left:14px;
+}
+
+.ammapObjectList a 
+{
+    color:#000000;
+}
+
+.ammapObjectList a 
+{
+    color:#000000;
+    text-decoration:none;
+    display:block;
+    padding:2px;
+}
+
+.ammapObjectList a:hover 
+{
+    color:#CC0000;
+    text-decoration:none;
+    background:#FFFFFF;
+    cursor:pointer;
+    display:block;
+}
+
+.ammapDescriptionText 
+{
+	overflow: auto; 
+}
+
+
+.amChartsPlotArea
+{
+	
+}
+
+
+
+
+
+
+
+

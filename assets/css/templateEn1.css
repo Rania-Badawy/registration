@@ -1,0 +1,242 @@
+body {
+    direction: ltr;
+}
+
+.one::before {
+    left: 0;
+    right: unset;
+}
+
+.left a,
+.right a {
+    direction: rtl;
+}
+
+.left a.sow1,
+.left a.sow2,
+.left a.sow3,
+.left a.sow4,
+.left a.sow5,
+.right a.sow1,
+.right a.sow2,
+.right a.sow3,
+.right a.sow4,
+.right a.sow5 {
+    position: absolute;
+    direction: ltr;
+    width: 120px;
+    line-height: 1;
+}
+
+.left a.sow1 {
+    left: 135px;
+    top: 14%;
+    color: #9f4faa;
+}
+
+.left a.sow2 {
+    left: 25px;
+    top: 31%;
+    color: #66588e;
+}
+
+.left a.sow3 {
+    top: 59%;
+    left: 30px;
+    color: #4976b7;
+}
+
+.left a.sow4 {
+    bottom: 20%;
+    left: 130px;
+    color: #1cc0b1;
+}
+
+.left a.sow5 {
+    left: 44%;
+    top: 20px;
+    color: #4282ba;
+}
+
+.right a.sow1 {
+    right: 90px;
+    top: 14%;
+    color: #d84745
+}
+
+.right a.sow2 {
+    right: 5px;
+    top: 30%;
+    color: #f86322
+}
+
+.right a.sow3 {
+    top: 60%;
+    right: 0;
+    color: #f8a700
+}
+
+.right a.sow4 {
+    bottom: 19%;
+    right: 90px;
+    color: #83bf3b
+}
+
+.right a.sow5 {
+    bottom: 22px;
+    right: 41%;
+    color: #6487c3;
+}
+
+.contact::before {
+    left: -15px;
+    right: unset;
+}
+
+.addContent {
+    margin-left: 10px
+}
+
+.gmap_canvas label {
+    position: absolute;
+    left: 10px;
+    right: unset;
+    top: 0;
+}
+
+.gmap_canvas .maps {
+    margin-top: 30px;
+    text-align: left;
+    margin-right: -60px;
+}
+
+@media screen and (max-width: 600px) {
+
+    .left a,
+    .right a {
+        display: inline-block;
+        max-width: 55px;
+        line-height: .9;
+        font-size: 8px !important;
+        word-break: break-word;
+    }
+
+    .left a.sow1 {
+        left: 49px !important;
+        top: 29.5% !important;
+        color: #9f4faa;
+    }
+
+    .left a.sow2 {
+        left: 5px !important;
+        top: 40% !important;
+        color: #66588e;
+    }
+
+    .left a.sow3 {
+        top: 55% !important;
+        left: 10px !important;
+        color: #4976b7;
+    }
+
+    .left a.sow4 {
+        bottom: 33.5% !important;
+        left: 47px !important;
+        color: #1cc0b1;
+    }
+
+    .left a.sow5 {
+        left: 43% !important;
+        top: 24% !important;
+        color: #4282ba;
+    }
+
+    .right a.sow1 {
+        right: 32px !important;
+        top: 30% !important;
+        color: #d84745
+    }
+
+    .right a.sow2 {
+        right: -1px !important;
+        top: 39% !important;
+        color: #f86322
+    }
+
+    .right a.sow3 {
+        top: 55.5% !important;
+        right: -3px !important;
+        color: #f8a700
+    }
+
+    .right a.sow4 {
+        bottom: 32% !important;
+        right: 30px !important;
+        color: #83bf3b
+    }
+
+    .right a.sow5 {
+        bottom: 99px !important;
+        right: 39% !important;
+        color: #6487c3;
+    }
+}
+
+
+.who_page p {
+    margin: 20px 20px 0;
+}
+
+.who_page li {
+    margin-Left: 30px;
+    margin-right: 0;
+}
+
+.who_page li:nth-of-type(2),
+.who_page li:nth-of-type(7) {
+    margin-left: 40px;
+    margin-right: 0;
+}
+
+.who_page li:nth-of-type(3),
+.who_page li:nth-of-type(6) {
+    margin-left: 50px;
+    margin-right: 0;
+}
+
+.who_page li:nth-of-type(4),
+.who_page li:nth-of-type(5) {
+    margin-left: 60px;
+    margin-right: 0;
+}
+
+.who_page div:first-of-type {
+    margin-right: 10px;
+    margin-left: 0;
+}
+
+@media screen and (max-width: 600px) {
+    .qyam img {
+        margin-left: -70px;
+    }
+}
+
+.who_page h5 {
+    min-width: 100px;
+}
+
+.whatadvantages h4 {
+    margin-bottom: 10px !important;
+    min-height: 60px;
+}
+
+
+@keyframes moving {
+    0% {
+        left: 100%;
+    }
+
+    100% {
+        left: -100%;
+    }
+}

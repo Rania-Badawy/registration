@@ -1,0 +1,137 @@
+.tornado-header .action-btns .icon-btn[data-notifications]::after {
+  content: attr(data-notifications);
+  position: absolute;
+  top: -5px;
+  right: 30px;
+  width: 15px;
+  height: 15px;
+  font-size: 8px;
+  line-height: 15px;
+  border-radius: 50%;
+  background-color: var(--danger-color);
+  color: #FFF;
+}
+.tornado-header .action-btns .icon-btn[data-requestss] {
+  position: relative;
+}
+
+.tornado-header .action-btns .icon-btn[data-requestss]::after {
+  content: attr(data-requestss);
+  position: absolute;
+  top: -5px;
+  right: 22px;
+  width: 15px;
+  height: 15px;
+  font-size: 8px;
+  line-height: 15px;
+  border-radius: 50%;
+  background-color: var(--danger-color);
+  color: #FFF;
+}
+.tornado-header .action-btns .icon-btn[data-notifications] {
+  position: relative;
+}
+.tornado-header .action-btns .icon-btn[data-notifications1]::after {
+  content: attr(data-notifications1);
+  position: absolute;
+  top: -5px;
+  right: 21px;
+  width: 15px;
+  height: 15px;
+  font-size: 8px;
+  line-height: 15px;
+  border-radius: 50%;
+  background-color: var(--danger-color);
+  color: #FFF;
+}
+.tornado-header .action-btns .icon-btn[data-notifications1] {
+  position: relative;
+}
+
+.table-inbox tr.unread {
+
+    background: none repeat scroll 0 0 #f7f7f7;
+    font-weight: 600;
+}
+.table-inbox tr.reply1 {
+
+    background: none repeat scroll 0 0 #FFEAE9;
+
+}
+.table-inbox tr.reply2 {
+
+    background: none repeat scroll 0 0 #FFFAA0;
+
+}
+
+.table-inbox tr.reply3 {
+
+    background: none repeat scroll 0 0 #E8E8E8;
+
+}
+
+.rating {
+  display: inline-block;
+  position: relative;
+  height: 50px;
+  line-height: 50px;
+  font-size: 50px;
+}
+
+.rating label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  cursor: pointer;
+}
+
+.rating label:last-child {
+  position: static;
+}
+
+.rating label:nth-child(1) {
+  z-index: 5;
+}
+
+.rating label:nth-child(2) {
+  z-index: 4;
+}
+
+.rating label:nth-child(3) {
+  z-index: 3;
+}
+
+.rating label:nth-child(4) {
+  z-index: 2;
+}
+
+.rating label:nth-child(5) {
+  z-index: 1;
+}
+
+.rating label input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.rating label .icon {
+  float: left;
+  color: transparent;
+}
+
+.rating label:last-child .icon {
+  color: #000;
+}
+
+.rating:not(:hover) label input:checked ~ .icon,
+.rating:hover label:hover input ~ .icon {
+  color: #09f;
+}
+
+.rating label input:focus:not(:checked) ~ .icon:last-child {
+  color: #000;
+  text-shadow: 0 0 5px #09f;
+}

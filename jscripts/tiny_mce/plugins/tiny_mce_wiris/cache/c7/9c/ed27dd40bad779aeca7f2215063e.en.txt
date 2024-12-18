@@ -1,0 +1,1 @@
+{"result":{"text":"cos open parentheses 35 close parentheses"},"status":"ok"}
